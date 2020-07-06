@@ -1,0 +1,191 @@
+.Card {
+    position: relative;
+    width: 50%;
+    padding: 0 10px;
+    margin-top: 64px;
+
+}
+
+.title{
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color:  var(--color--green);
+    font-family: "fira_sansbold";
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.text{
+    color: var(--color--grey);
+    font-family: "fira_sansregular";
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.image_wrap {
+    display: inherit;
+    overflow: hidden;
+    max-width: 100%;
+    height: 330px;
+    margin-bottom: 24px;
+}
+
+.image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.big {
+    width: 50%;
+}
+
+.circle .image_wrap {
+    width: 336px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.top {
+    position: relative;
+}
+
+.number_wrap {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 15px;
+    color: black;
+    font-family: "fira_sansbold";
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 0;
+
+}
+.number_wrap span {
+    line-height: 0;
+}
+.small {
+    width: 25%;
+}
+
+.small .number_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -24px;
+    color: white;
+    font-size: 100px;
+}
+
+.small .image_wrap {
+    height: 155px;
+}
+
+.small .title, .small .text {
+    display: inline;
+    padding-right: 5px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.circle .label img {
+    margin: 5px 22px;
+}
+
+.circle .label .triangle {
+    margin: 15px 22px 0;
+}
+
+.small .label {
+    top: -13px;
+    right: -15px
+}
+
+.small .label img{
+    width: 40px;
+    margin: 2px 10px;
+}
+
+
+.circle .small .label .triangle{
+    margin: 2px 10px;
+}
+
+.triangle {
+    position: relative;
+    width: 55px;
+    height: 30px;
+    background: #82CA9C;
+    margin-top: 14px;
+}
+
+.triangle span {
+    font-size: 14px;
+    word-break: normal;
+    color: white;
+    line-height: 12px;
+    display: inline-flex;
+    position: absolute;
+    text-align: center;
+    font-family: fira_sansbold;
+    padding: 0px 5px;
+}
+
+.triangle::before,
+.triangle:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+}
+
+.triangle::before {
+    top: -14px;
+    border-bottom: 14px solid #82CA9C;
+}
+
+.triangle:after {
+    bottom: -14px;
+    border-top: 14px solid #82CA9C;
+}
+
+@media (--md) {
+    .Card {
+        padding: 0 5px;
+        margin-top: 40px;
+    }
+
+    .big .image_wrap {
+        margin: 0 auto;
+        border-radius: 50% 50% 0 0;
+    }
+
+    .circle .image_wrap {
+        border-radius: 50%;
+    }
+}
+@media (--sm) {
+
+    .Card {
+        width: 100%;
+    }
+
+    .image_wrap {
+        height: 290px;
+    }
+}
